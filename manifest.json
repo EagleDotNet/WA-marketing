@@ -1,0 +1,42 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "icons/logo_128.png"
+      }
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "css": [  ],
+      "js": [ "content-script.js" ],
+      "matches": [ "https://web.whatsapp.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_extDesc__",
+   "externally_connectable": {
+      "matches": [ "*://*.waplus.io/*" ]
+   },
+   "homepage_url": "https://chrome.google.com/webstore/detail/waplus-crm-crm-tool-for-w/jmjcgjmipjiklbnfbdclkdikplgajhgc",
+   "host_permissions": [ "*://web.whatsapp.com/*", "*://*.waplus.io/*" ],
+   "icons": {
+      "128": "icons/logo_128.png",
+      "16": "icons/logo_16.png",
+      "48": "icons/logo_48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAz4MbF97jh9QrSxWGQ02VkBGojYvHjxHnPTUtwKmYeiPwiMHBpm8UlRrES6PqlQ/i4o3W3wF1mrzvyXx4CeRc+HEb7A/T0K6AnyNLd4rsgf2Ohxs4qUCMinTYA0Cu20sXTU0sqdF78Go4Gio2tX/R83yzPMu0+YhL0cMGhqMs5t34BukqslCQdpptjgkIZTMR/yTYFQkipdbf+kC9wdLUXCURmNb78Vc3w8viKTN5A6VFfYqKfUivQelHseSeNelEb0ECN0Dylc4qX59HVikS3R4wwGXDAkS9ZKWO/+OeY96g2OmdQnFpVjl/yEr/wDFGg1TF4GsaaXJzaGxN3zgIuwIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_extName__",
+   "oauth2": {
+      "client_id": "515287609542-bduhga17cas9tjm79s1cc2untnbmh58f.apps.googleusercontent.com",
+      "scopes": [ "https://www.googleapis.com/auth/calendar.events" ]
+   },
+   "permissions": [ "activeTab", "storage", "cookies", "scripting", "contextMenus", "alarms" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.5.5",
+   "web_accessible_resources": [ {
+      "matches": [ "https://web.whatsapp.com/*" ],
+      "resources": [ "qpqp.js", "inject-script.js", "icons/*", "images/*", "install-popup.html", "websocket/*" ]
+   } ]
+}
